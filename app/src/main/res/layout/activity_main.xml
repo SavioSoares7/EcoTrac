@@ -1,38 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:layout_height="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
     android:background="@color/white200"
-    android:padding="10sp">
+    android:orientation="vertical"
+>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:padding="15sp">
+
         <EditText
             android:id="@+id/editSearch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
             android:background="@drawable/edit_text_background"
             android:drawableLeft="@drawable/search"
             android:drawablePadding="6sp"
             android:hint="Pesquise o produto"
+            android:textColorHint="@color/dark"
             android:padding="20sp"
-            android:textColor="@color/dark"
- />
+            android:textColor="@color/dark" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
 
         <HorizontalScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="15sp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -42,77 +44,80 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal"
                     android:layout_marginTop="20sp"
+                    android:layout_marginRight="10sp"
                     android:background="@drawable/edit_linear_selected"
-                    android:layout_marginRight="10sp"
-                    android:padding="20sp">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Todos os produtos"
-                        android:textColor="#fff"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
                     android:orientation="horizontal"
-                    android:layout_marginTop="20sp"
-                    android:background="@drawable/edit_linear"
-                    android:layout_marginRight="10sp"
                     android:padding="20sp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Todos os produtos"
-                        android:textColor="@color/dark"/>
+                        android:textColor="@color/white" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal"
                     android:layout_marginTop="20sp"
-                    android:background="@drawable/edit_linear"
                     android:layout_marginRight="10sp"
+                    android:background="@drawable/edit_linear"
+                    android:orientation="horizontal"
                     android:padding="20sp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Todos os produtos"
-                        android:textColor="@color/dark"/>
+                        android:textColor="@color/dark" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal"
                     android:layout_marginTop="20sp"
-                    android:background="@drawable/edit_linear"
                     android:layout_marginRight="10sp"
+                    android:background="@drawable/edit_linear"
+                    android:orientation="horizontal"
                     android:padding="20sp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Todos os produtos"
-                        android:textColor="@color/dark"/>
+                        android:textColor="@color/dark" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal"
                     android:layout_marginTop="20sp"
-                    android:background="@drawable/edit_linear"
                     android:layout_marginRight="10sp"
+                    android:background="@drawable/edit_linear"
+                    android:orientation="horizontal"
                     android:padding="20sp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Todos os produtos"
-                        android:textColor="@color/dark"/>
+                        android:textColor="@color/dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20sp"
+                    android:layout_marginRight="10sp"
+                    android:background="@drawable/edit_linear"
+                    android:orientation="horizontal"
+                    android:padding="20sp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Todos os produtos"
+                        android:textColor="@color/dark" />
                 </LinearLayout>
 
 
@@ -121,5 +126,23 @@
         </HorizontalScrollView>
 
     </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"> <!-- Adicione weight para ocupar o espaço restante -->
+
+        <!-- ... Outros elementos dentro do RelativeLayout ... -->
+
+    </RelativeLayout>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:menu="@menu/main_menu"
+        android:background="@color/white"
+        app:labelVisibilityMode="unlabeled"/>
 
 </LinearLayout>
