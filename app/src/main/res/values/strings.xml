@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">EcoTrac</string>
+    <string name="toEnter">Entrar</string>
+    <string name="email">Email...</string>
+    <string name="password">Senha...</string>
+    <string name="singup">Cadastrar</string>
+    <string name="forgetPassword">Esqueceu a senha ?</string>
 </resources>
