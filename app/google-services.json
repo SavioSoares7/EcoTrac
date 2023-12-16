@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "171135432747",
+    "project_id": "ecotrac-3d97f",
+    "storage_bucket": "ecotrac-3d97f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:171135432747:android:c4957a379977485115126e",
+        "android_client_info": {
+          "package_name": "com.example.ecotrac"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB40e0oYmJUBkgEwX7PRnPukk9hL6X60N0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
