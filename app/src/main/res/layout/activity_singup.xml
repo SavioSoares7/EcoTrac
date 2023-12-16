@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
     android:padding="30dp"
-    android:background="@drawable/shappe">
+    android:background="@color/white">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -54,6 +54,7 @@
         android:textColor="#000"
         android:textColorHint="#ccc"
         app:layout_constraintTop_toBottomOf="@+id/inputEmail"
+        android:inputType="textPassword"
         tools:layout_editor_absoluteX="30dp" />
 
     <Button
@@ -80,5 +81,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonRegister" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
