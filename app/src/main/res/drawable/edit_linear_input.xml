@@ -7,9 +7,9 @@
     <!-- Cor da borda e espessura -->
     <stroke
         android:color="#A59E9E"
-        android:width="1sp"/>
+        android:width="2sp"/>
 
     <!-- Raio dos cantos -->
-    <corners android:radius="8dp" /> <!-- Ajuste este valor conforme necessário -->
+    <corners android:radius="14dp" /> <!-- Ajuste este valor conforme necessário -->
 
 </shape>
