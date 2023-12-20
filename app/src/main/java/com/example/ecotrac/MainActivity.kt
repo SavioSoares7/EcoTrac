@@ -12,6 +12,9 @@ import com.example.ecotrac.databinding.ActivityMainBinding
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,8 +43,9 @@ class MainActivity : AppCompatActivity() {
 
                 for (postSnapshot in dataSnapshot.children) {
                     val post = postSnapshot.child("Post").getValue(String::class.java)
+                    val datePost = postSnapshot.child("DataPublicacao").getValue(String::class.java)
                     post?.let {
-                        postList.add(it)
+                        postList.add("$it - Publicado em: $datePost")
                     }
                 }
 
@@ -59,7 +63,6 @@ class MainActivity : AppCompatActivity() {
 
         val database = FirebaseDatabase.getInstance()
         val postDatabase = database.getReference("post")
-
         val post = inputPost.text.toString()
 
         if (post.isEmpty()) {
@@ -74,6 +77,7 @@ class MainActivity : AppCompatActivity() {
         // Cria um mapa de dados
         val data = HashMap<String, Any>()
         data["Post"] = post
+        data["DataPublicacao"] = getCurrentDate()
 
         // Insere os dados com a chave única
         postKey?.let {
@@ -84,5 +88,11 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Erro ao inserir os dados", Toast.LENGTH_LONG).show()
             }
         }
+    }
+
+    private fun getCurrentDate(): String{
+        val dateFormat = SimpleDateFormat("dd/MM/yy HH:mm:ss", Locale.getDefault())
+        val date = Date()
+        return  dateFormat.format(date)
     }
 }

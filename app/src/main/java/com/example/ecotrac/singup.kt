@@ -58,11 +58,17 @@ class singup : AppCompatActivity() {
         val password = passwordField.text.toString().trim()
         val user = userFiled.text.toString().trim()
 
+
         if(email.isEmpty() || password.isEmpty() || user.isEmpty() ){
             Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_LONG).show()
 
             emailField.setBackgroundResource(R.drawable.edit_linear_input_fail)
             passwordField.setBackgroundResource(R.drawable.edit_linear_input_fail)
+            return
+        }
+        if(password.length <=3){
+            Toast.makeText(this, "Informe uma senha maior que 3 Caractere", Toast.LENGTH_LONG).show()
+
             return
         }
 
