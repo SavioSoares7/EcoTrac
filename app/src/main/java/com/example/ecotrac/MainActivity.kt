@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         val postsDatabase = database.getReference("post")
 
         val postList = mutableListOf<String>()
-        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, postList)
+        val adapter = ArrayAdapter(this, R.layout.list_item_layout, postList)
         listView.adapter = adapter
 
         btnPost.setOnClickListener {

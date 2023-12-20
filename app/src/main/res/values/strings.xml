@@ -6,4 +6,5 @@
     <string name="singup">Cadastrar</string>
     <string name="forgetPassword">Esqueceu a senha ?</string>
     <string name="post">Publicar</string>
+    <string name="user">Usuário</string>
 </resources>

@@ -47,14 +47,16 @@
                     android:text="Publicações"
                     android:textStyle="bold"
                     android:textSize="28dp"
-                        android:textColor="@color/dark"/>
+                    android:textColor="@color/dark"/>
+
                 <ListView
                     android:id="@+id/listView"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_height="355dp"
+                    android:background="#ccc"
+                    android:divider="#000"
+                    android:orientation="vertical" />
 
-                </ListView>
             </LinearLayout>
         </ScrollView>
     </LinearLayout>

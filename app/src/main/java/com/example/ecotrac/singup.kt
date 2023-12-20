@@ -34,11 +34,12 @@ class singup : AppCompatActivity() {
         val textToEnter = binding.textToEnter
         val inputEmail = binding.inputEmail
         val inputPassword = binding.inputPassword
+        val inputUser = binding.inputUser
         val buttonRegister = binding.buttonRegister
 
 
         buttonRegister.setOnClickListener{
-            registerUser(inputEmail,inputPassword)
+            registerUser(inputEmail,inputPassword, inputUser)
         }
 
         textToEnter.setOnClickListener{
@@ -52,11 +53,12 @@ class singup : AppCompatActivity() {
         startActivity(intent)
     }
 
-    private fun registerUser(emailField : EditText, passwordField : EditText){
+    private fun registerUser(emailField : EditText, passwordField : EditText, userFiled : EditText){
         val email = emailField.text.toString().trim()
         val password = passwordField.text.toString().trim()
+        val user = userFiled.text.toString().trim()
 
-        if(email.isEmpty() || password.isEmpty()){
+        if(email.isEmpty() || password.isEmpty() || user.isEmpty() ){
             Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_LONG).show()
 
             emailField.setBackgroundResource(R.drawable.edit_linear_input_fail)
