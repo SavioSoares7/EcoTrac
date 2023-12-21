@@ -49,6 +49,8 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
 
+                postList.reverse()
+
                 // Notifica o adaptador sobre as mudanças na lista
                 adapter.notifyDataSetChanged()
             }

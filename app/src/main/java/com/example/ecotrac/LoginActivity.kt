@@ -29,6 +29,14 @@ class LoginActivity : AppCompatActivity() {
         val inputPassword = binding.inputPassword
         val buttonToEnter = binding.buttonToEnter
 
+        val buttonForgetPassword = binding.btnForgetPassword
+
+
+        buttonForgetPassword.setOnClickListener {
+            val intent = Intent(this, ForgetPasswordActivity::class.java)
+            startActivity(intent)
+        }
+
         buttonToEnter.setOnClickListener{
             loginUser(inputEmail, inputPassword)
         }
